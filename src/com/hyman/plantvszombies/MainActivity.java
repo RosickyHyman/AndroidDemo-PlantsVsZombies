@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 		director.setScreenSize(480, 320);
 		
 		CCScene ccScene = CCScene.node();
-		ccScene.addChild(new FightLayer());
+		ccScene.addChild(new WelcomLayer());
 		director.runWithScene(ccScene);
 	}
 

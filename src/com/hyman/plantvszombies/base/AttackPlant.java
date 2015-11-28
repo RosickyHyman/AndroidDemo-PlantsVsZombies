@@ -32,12 +32,6 @@ public abstract class AttackPlant extends Plant {
 		return bullets;
 	}
 
-//	@Override
-//	public void onDie(BaseElement element) {
-//
-//		if (element instanceof Bullet) {
-//			bullets.remove(element);
-//		}
-//	}
+
 
 }
