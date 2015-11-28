@@ -3,7 +3,7 @@ package com.hyman.plantvszombies.base;
  * 子弹
  */
 public abstract class Bullet extends Product {
-	protected int attack = 20;// 攻击力
+	protected int attack = 10;// 攻击力
 	protected int speed =100;// 移动速度
 
 	public Bullet(String filepath) {

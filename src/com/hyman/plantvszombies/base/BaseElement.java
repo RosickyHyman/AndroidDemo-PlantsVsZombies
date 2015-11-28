@@ -2,11 +2,8 @@ package com.hyman.plantvszombies.base;
 
 import org.cocos2d.nodes.CCSprite;
 
-import android.view.View;
-import android.widget.Button;
 
-
-/**
+/*
  * 对战元素共性
  * 
  * @author Administrator
@@ -25,12 +22,12 @@ public abstract class BaseElement extends CCSprite {
 		super(filepath);
 	}
 
-	/**
+	/*
 	 * 原地不动的基本动作
 	 */
 	public abstract void baseAction();
 
-	/**
+	/*
 	 * 销毁
 	 */
 	public void destroy() {

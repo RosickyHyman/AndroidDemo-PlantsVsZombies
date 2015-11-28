@@ -26,8 +26,9 @@ public class ShowPlant {
 	}
 	
 
-	
+	private int id;
 	public ShowPlant(int id) {
+		this.id=id;
 		
 		HashMap<String, String> hashMap = db.get(id);
 		String path = hashMap.get("path");
@@ -38,6 +39,17 @@ public class ShowPlant {
 		bgSprite.setOpacity(150);//°ëÍ¸Ã÷Ð§¹û
 		bgSprite.setAnchorPoint(0,0);	
 		
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 

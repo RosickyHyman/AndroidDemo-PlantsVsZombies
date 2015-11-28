@@ -2,9 +2,6 @@ package com.hyman.plantvszombies.base;
 
 import org.cocos2d.types.CGPoint;
 
-import android.view.View;
-import android.widget.Button;
-
 /*
  * ½©Ê¬»ùÀà
  * 
@@ -34,10 +31,11 @@ public abstract class Zombies extends BaseElement {
 
 	/*
 	 * ¹¥»÷
-	 * 
 	 * @param element:¹¥»÷Ö²Îï£¬¹¥»÷½©Ê¬
 	 */
+	
 	public abstract void attack(BaseElement element);
+
 
 	/*
 	 * ±»¹¥»÷

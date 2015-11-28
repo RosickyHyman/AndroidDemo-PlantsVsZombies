@@ -27,6 +27,7 @@ import com.hyman.plantvszombies.utils.CommonUtils;
 
 public class FightLayer extends BaseLayer {
 
+	public static final int TAG_CHOSE = 10;
 	private CGSize contentSize;
 	private CCTMXTiledMap map;
 	private CCSprite choseSprite;
@@ -108,7 +109,7 @@ public class FightLayer extends BaseLayer {
 		choseSprite = CCSprite.sprite("image/fight/chose/fight_chose.png");
 		choseSprite.setAnchorPoint(0, 1);
 		choseSprite.setPosition(0, winSize.height);
-		this.addChild(choseSprite);
+		this.addChild(choseSprite,0,TAG_CHOSE);
 
 		// 创建备选框
 		chooseSprite = CCSprite.sprite("image/fight/chose/fight_choose.png");
@@ -166,6 +167,13 @@ public class FightLayer extends BaseLayer {
 
 		// android点转化成cocos点
 		CGPoint point = this.convertTouchToNodeSpace(event);
+		if (GameCotroller.isStart) {
+			
+			//交给GameCotroller来处理
+			GameCotroller.getInstance().handleTouch(point);
+			return super.ccTouchesBegan(event);
+			
+		}
 		// 备选框植物的边框
 		CGRect boundingBox = chooseSprite.getBoundingBox();
 		// 已选框植物的边框
@@ -236,7 +244,7 @@ public class FightLayer extends BaseLayer {
 					this.addChild(plant.getSprite());
 				}
 		
-		if (selectPlants.size()<5) {
+		if (selectPlants.size()<1) {
 			return;
 		}else {
 			//移除备选框
